@@ -61,7 +61,7 @@ public class GraphicView extends JPanel implements View {
 							y * fieldDimension.height,
 							fieldDimension.width,
 							fieldDimension.height);
-				}
+				} 
 			}
 		}
 		// Paint Start
@@ -74,7 +74,11 @@ public class GraphicView extends JPanel implements View {
 		// Paint Player
 		g.setColor(Color.YELLOW);
 		g.fillOval(player.x, player.y, player.width, player.height);
+		// Paint Enemy
+		// TODO
+							
 	}
+	
 
 	@Override
 	public void update(World world) {

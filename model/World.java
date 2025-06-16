@@ -216,13 +216,13 @@ public class World {
 				if (odd % 2 == 0 ) {
 					if (fields[x][y + i] == FieldType.WALL && y-1>0) {
 						fields[x][y - i] = FieldType.WALL;
-					} else {
+					} else if (y + i < height){
 						fields[x][y + i] = FieldType.WALL;
 					}
 				} else {
-						if (fields[x+i][y] == FieldType.WALL && x-1 > 0) {
+						if (x + i < width && fields[x+i][y] == FieldType.WALL && x-1 > 0) {
 							fields[x-i][y] = FieldType.WALL;
-						} else{
+						} else if (x + i < width){
 							fields[x+i][y] = FieldType.WALL;
 						}
 					}
