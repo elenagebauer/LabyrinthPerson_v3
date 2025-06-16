@@ -175,6 +175,10 @@ public class World {
 	public void setStartY(int startY) {
 		this.startY = startY;
 	}
+	
+	public ArrayList<Enemy> getEnemies() {
+    return enemies;
+}
 
 	public void randomStartGoal() {
 		Random rand = new Random();

@@ -7,6 +7,7 @@ import java.awt.Rectangle;
 
 import javax.swing.JPanel;
 
+import model.Enemy;
 import model.World;
 
 /**
@@ -75,7 +76,15 @@ public class GraphicView extends JPanel implements View {
 		g.setColor(Color.YELLOW);
 		g.fillOval(player.x, player.y, player.width, player.height);
 		// Paint Enemy
-		// TODO
+		g.setColor(Color.MAGENTA); // z.B. für Gegner
+		for (Enemy enemy : world.getEnemies()) {
+    		g.fillOval(
+        	enemy.getX() * fieldDimension.width,
+        	enemy.getY() * fieldDimension.height,
+        	fieldDimension.width,
+        	fieldDimension.height
+    		);
+		}
 							
 	}
 	
